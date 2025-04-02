@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SignUp: React.FC = () => {
     const [name, setName] = useState<string>(''); // Specify type for useState
@@ -54,8 +55,8 @@ const SignUp: React.FC = () => {
         <div className="container">
             <div className="form-box">
                 <div className="left-side">
-                    <h2>Hello User!</h2>
-                    <p>Glad to see you! sign up to get started</p>
+                    <h2>Hello friend!</h2>
+                    <p>Glad to see you! Sign up to get started</p>
                 </div>
                 <div className="right-side">
                     <form onSubmit={handleSubmit}>
@@ -105,7 +106,7 @@ const SignUp: React.FC = () => {
                             <label>I agree to the <a href="#">Terms & Conditions</a></label>
                         </div>
                         <button type="submit" className="btn">Create Account</button>
-                        <p className="login-link">Already have an account?<a href="/signin.html">Sign-in</a></p>
+                        <p className="login-link">Already have an account? <Link to="/signin">Sign-in</Link></p>
                     </form>
                 </div>
             </div>

@@ -1,14 +1,19 @@
 import React from 'react';
-import SignUp from './components/signUp';
-// import SignIn from './components/SignIn';
-
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+import SignUp from './components/signUp'; // Ensure the path is correct
+import SignIn from './components/SignIn'; // Ensure the path is correct
 
 const App: React.FC = () => {
   return (
-    <div>
-      {/* <SignIn /> */}
-      <SignUp />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/" element={<Navigate to="/signup" />} /> {/* Redirect to SignUp */}
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
