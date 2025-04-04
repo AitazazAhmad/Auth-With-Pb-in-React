@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import SignUp from './components/signUp'; // Ensure the path is correct
-import SignIn from './components/SignIn'; // Ensure the path is correct
+import SignUp from './components/signUp';
+import SignIn from './components/SignIn';
 
 const App: React.FC = () => {
   return (
